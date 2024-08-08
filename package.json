@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs": "^4.0.3",
+    "express": "^4.19.2",
+    "landing__p": "file:",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "nodemailer": "^6.9.14",
+    "toastify-js": "^1.12.0"
+  },
+  "name": "landing__p",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "author": "Mathbkj<matheusgblasel@hotmail.com>",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Landing Page|ServerSide😎</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .poppins-thin {
+          font-family: "Poppins", sans-serif;
+          font-weight: 100;
+          font-style: normal;
+        }
+
+        .poppins-extralight {
+          font-family: "Poppins", sans-serif;
+          font-weight: 200;
+          font-style: normal;
+        }
+
+        .poppins-light {
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        .poppins-regular {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .poppins-medium {
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+        }
+
+        .poppins-semibold {
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+        }
+
+        .poppins-bold {
+          font-family: "Poppins", sans-serif;
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        .poppins-extrabold {
+          font-family: "Poppins", sans-serif;
+          font-weight: 800;
+          font-style: normal;
+        }
+
+        .poppins-black {
+          font-family: "Poppins", sans-serif;
+          font-weight: 900;
+          font-style: normal;
+        }
+
+        .poppins-thin-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 100;
+          font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 200;
+          font-style: italic;
+        }
+
+        .poppins-light-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        .poppins-regular-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        .poppins-medium-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: italic;
+        }
+
+        .poppins-bold-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 700;
+          font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 800;
+          font-style: italic;
+        }
+
+        .poppins-black-italic {
+          font-family: "Poppins", sans-serif;
+          font-weight: 900;
+          font-style: italic;
+        }
+        .transition-movebg {
+          transition: background 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      }
+    </style>
+    <style>
+      * {
+        box-sizing: content-box;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth !important;
+        outline: none;
+      }
+      input {
+        background: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body
+    class="bg-slate-950 relative m-0 p-0 h-[100vh] font-fonts text-lime-500 overflow-x-hidden"
+  >
+    <nav
+      class="flex text-white text-2xl poppins-light justify-around items-center"
+    >
+      <h1 class="mx-8">Monoth</h1>
+      <ul class="flex items-center my-3 text-xl gap-3">
+        <a
+          href="#"
+          class="hover:opacity-50 hover:transition-opacity transition-opacity"
+          ><li class="list-item">Why Monoth</li></a
+        >
+        <a
+          href="#"
+          class="hover:opacity-50 hover:transition-opacity transition-opacity"
+          ><li class="list-item">How It Works</li></a
+        >
+        <a
+          href="#"
+          class="hover:opacity-50 hover:transition-opacity transition-opacity"
+          ><li class="list-item">Study Guide</li></a
+        >
+        <button
+          class="poppins-medium ring-2 ring-lime-500 hover:scale-75 hover:transition-transform transition-transform rounded-2xl p-2"
+        >
+          Book a Course
+        </button>
+        <button
+          class="text-slate-900 poppins-medium bg-lime-500 hover:scale-75 transition-transform rounded-2xl p-2"
+        >
+          Get Started
+        </button>
+        <a class="#" id="cart" class="caret-pink-300" href="#"> </a>
+      </ul>
+    </nav>
+    <main
+      class="flex text-center flex-col my-[5%] translate-x-1/6 poppins-light justify-center items-center"
+    >
+      <h1 class="poppins-black text-2xl">
+        We area a new brand for providing easy to hard Math Calculations and
+        <br />
+        offering a variety of problems to help your perfomance improving
+      </h1>
+      <br />
+      <h2 class="poppins-semibold text-lime-400 text-xl">
+        Capability of helping with mostly any known Math problem within
+        seconds.<br />
+        Here you can find out stuff you don't understand and<br />train your
+        abilities for Math tests!
+      </h2>
+      <br />
+      <button
+        class="bg-gradient-to-r poppins-medium tracking-wide text-white transition-opacity hover:opacity-50 origin-top-left hover:origin-top-right from-lime-500/75 to-lime-400/50 p-3 rounded-2xl hover:from-lime-500/75 hover:via-lime-500/50 hover:to-lime-400/30 hover:transition-opacity"
+        role="link"
+      >
+        Learn More
+      </button>
+      <hr class="border border-white w-[50%] mx-auto my-3" />
+      <br />
+      <div id="reasons__div">
+        <h1 class="text-2xl w-full text-white poppins-bold">
+          4 Reasons Why You Should Contribute
+        </h1>
+        <br />
+        <div
+          class="grid w-[700px] text-center h-[600px] gap-4 text-white md:grid-cols-3 grid-cols-2 m-2"
+        >
+          <div class="bg-slate-400/30 p-2">
+            <span class="float-start text-5xl text-white/50 poppins-medium"
+              >1</span
+            >
+            <h1 class="text-nowrap poppins-semibold">Self-Education</h1>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et
+            voluptatum aspernatur accusantium in officia libero voluptas
+            recusandae itaque saepe illo aperiam iusto, magnam similique magni
+            explicabo? Quis, ducimus minima?
+          </div>
+          <div class="bg-slate-400/30 p-2">
+            <span class="float-start text-5xl text-white/50 poppins-medium"
+              >2</span
+            >
+            <h1 class="text-nowrap poppins-semibold">MindFullness</h1>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et
+            voluptatum aspernatur accusantium in officia libero voluptas
+            recusandae itaque saepe illo aperiam iusto, magnam similique magni
+            explicabo? Quis, ducimus minima?
+          </div>
+          <div class="bg-slate-400/30 p-2">
+            <span class="float-start text-5xl text-white/50 poppins-medium"
+              >3</span
+            >
+            <h1 class="text-nowrap poppins-semibold">Concentration Help</h1>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et
+            voluptatum aspernatur accusantium in officia libero voluptas
+            recusandae itaque saepe illo aperiam iusto, magnam similique magni
+            explicabo? Quis, ducimus minima?
+          </div>
+          <div class="bg-slate-400/30 md:p-2 sm:p-1 md:col-span-full">
+            <span class="float-start text-5xl text-white/50 poppins-medium"
+              >4</span
+            >
+            <h1 class="text-nowrap poppins-semibold">Time-Optmizing</h1>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, et
+            voluptatum aspernatur accusantium in officia libero voluptas
+            recusandae itaque saepe illo aperiam iusto, magnam similique magni
+            explicabo? Quis, ducimus minima?
+          </div>
+        </div>
+        <br />
+      </div>
+      <hr class="border border-white w-[50%] mx-auto my-3" />
+      <div class="form__sec w-[60%] flex justify-center items-center">
+        <h1 class="text-2xl poppins-black tracking-wider">
+          Need To Contact Us?
+        </h1>
+        <form
+          method="post"
+          id="main__form"
+          class="container p-4 rounded-xl text-2xl bg-lime-500 text-slate-950 flex flex-col justify-center items-center"
+        >
+          <h2 class="poppins-semibold">Contact</h2>
+          <h3 class="poppins-light">Write Your Information</h3>
+          <br />
+          <div id="name__div" class="relative w-full">
+            <input
+              type="text"
+              placeholder="First Name"
+              id="FirstName"
+              name="FirstName"
+              class="placeholder:text-slate-950"
+            />
+          </div>
+
+          <div id="mail__div" class="w-full relative m-4">
+            <input
+              type="text"
+              placeholder="Email"
+              id="Email"
+              name="Email"
+              class="placeholder:text-slate-950"
+            />
+            <span id="mail__svg" class="absolute self-center"></span>
+          </div>
+
+          <button
+            id="main__submitter"
+            class="mx-auto text-white w-max my-2 rounded-3xl p-3 bg-gradient-to-r from-slate-950/80 via-slate-950/60 to-slate-950/40 hover:from-slate-950/80 hover:to-slate-950/30 hover:transition-opacity hover:opacity-50 transition-opacity"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+      <hr class="border border-white w-[50%] mx-auto my-3" />
+      <br />
+      <section
+        class="text-left poppins-black inline-flex -rotate-2 text-3xl p-3 w-[70%]"
+      >
+        <div class="line-container">
+          <h2 class="text-lime-300 poppins-black">
+            Why Should You Trust Monoth Methods?
+          </h2>
+          <br />
+          <h2 class="text-white text-2xl poppins-black">
+            We're made with a fully tested and humanized AI <br />seeking for
+            more compreenhisive explanation about Math criterias.
+          </h2>
+          <br />
+          <h3 class="text-white text-xl poppins-regular">
+            The entire database was carefully designed and trained <br />
+            for our members. We have multiple courses explaining about the
+            theories and much more.
+          </h3>
+        </div>
+        <div class="img-div inline-block">
+          <img
+            src="/machine_learning.jpg"
+            class="object-cover rounded-md flex"
+          />
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const main__form = document.getElementById("main__form");
+        const main__submitter = document.getElementById("main__submitter");
+        const svg = document.getElementById("cart");
+        const mailSVG = document.getElementById("mail__svg");
+        const phoneSVG = document.getElementById("phone__svg");
+
+        console.log(main__form);
+
+        const mailBox = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+            `;
+
+        const cart = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14" fill="none">
+      <path d="M0.507507 0.5H2.94968L3.81968 9.15C3.85584 9.38845 3.97696 9.6058 4.16073 9.762C4.34449 9.9182 4.57852 10.0027 4.81968 10H11.1197C11.3378 10.0114 11.5536 9.95107 11.7341 9.82829C11.9147 9.7055 12.0501 9.52698 12.1197 9.32L13.4497 5.32C13.4993 5.16962 13.5125 5.0096 13.4881 4.85314C13.4638 4.69667 13.4026 4.54822 13.3097 4.42C13.2129 4.28368 13.0834 4.17381 12.9332 4.10043C12.783 4.02706 12.6167 3.99253 12.4497 4H3.29968" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10.9497 13.5C10.6736 13.5 10.4497 13.2761 10.4497 13C10.4497 12.7239 10.6736 12.5 10.9497 12.5C11.2258 12.5 11.4497 12.7239 11.4497 13C11.4497 13.2761 11.2258 13.5 10.9497 13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4.44971 13.5C4.17356 13.5 3.94971 13.2761 3.94971 13C3.94971 12.7239 4.17356 12.5 4.44971 12.5C4.72585 12.5 4.94971 12.7239 4.94971 13C4.94971 13.2761 4.72585 13.5 4.44971 13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+            `;
+        svg.innerHTML += cart;
+        mailSVG.innerHTML += mailBox;
+
+        main__form.addEventListener("submit", (ev) => {
+          ev.preventDefault();
+          const formData = new FormData(main__form);
+          const data = JSON.stringify(Object.fromEntries(formData));
+
+          fetch("/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: data,
+          });
+        });
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
