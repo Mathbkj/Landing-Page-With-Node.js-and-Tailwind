@@ -146,6 +146,22 @@
       input {
         background: none;
       }
+      blockquote::before {
+        position: absolute;
+        margin: 0;
+        direction: ltr;
+        left: 33%;
+        content: "";
+        width: 8px;
+        height: 50px;
+        background-color: white;
+        opacity: 0.5;
+      }
+      nav {
+        animation: rotate 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1);
+      }
     </style>
     <title>Document</title>
   </head>
@@ -182,7 +198,7 @@
         >
           Get Started
         </button>
-        <a class="#" id="cart" class="caret-pink-300" href="#"> </a>
+        <a class="#" id="cart" class="" href="#"> </a>
       </ul>
     </nav>
     <main
@@ -265,48 +281,14 @@
         <br />
       </div>
       <hr class="border border-white w-[50%] mx-auto my-3" />
-      <div class="form__sec w-[60%] flex justify-center items-center">
-        <h1 class="text-2xl poppins-black tracking-wider">
-          Need To Contact Us?
-        </h1>
-        <form
-          method="post"
-          id="main__form"
-          class="container p-4 rounded-xl text-2xl bg-lime-500 text-slate-950 flex flex-col justify-center items-center"
-        >
-          <h2 class="poppins-semibold">Contact</h2>
-          <h3 class="poppins-light">Write Your Information</h3>
-          <br />
-          <div id="name__div" class="relative w-full">
-            <input
-              type="text"
-              placeholder="First Name"
-              id="FirstName"
-              name="FirstName"
-              class="placeholder:text-slate-950"
-            />
-          </div>
-
-          <div id="mail__div" class="w-full relative m-4">
-            <input
-              type="text"
-              placeholder="Email"
-              id="Email"
-              name="Email"
-              class="placeholder:text-slate-950"
-            />
-            <span id="mail__svg" class="absolute self-center"></span>
-          </div>
-
-          <button
-            id="main__submitter"
-            class="mx-auto text-white w-max my-2 rounded-3xl p-3 bg-gradient-to-r from-slate-950/80 via-slate-950/60 to-slate-950/40 hover:from-slate-950/80 hover:to-slate-950/30 hover:transition-opacity hover:opacity-50 transition-opacity"
-            type="submit"
-          >
-            Send
-          </button>
-        </form>
-      </div>
+      <blockquote
+        class="text-white"
+        cite="https://quotefancy.com/pythagoras-quotes"
+      >
+        <q>Learn To Be Silent. Let Your Quite Mind Listen and Absorb</q>
+        <br />
+        -Pythagoras
+      </blockquote>
       <hr class="border border-white w-[50%] mx-auto my-3" />
       <br />
       <section
@@ -336,56 +318,80 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="w-full p-2 text-white text-base bg-slate-900">
+      <div
+        class="container p-2 flex justify-around items-center flex-row flex-wrap"
+      >
+        <section class="footer-sec">
+          <h1 class="text-white opacity-50 poppins-thin">ABOUT MONOTH</h1>
+          <ul>
+            <a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+              ><li>Home</li></a
+            ><a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+            >
+              <li>Get In Touch</li></a
+            ><a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+              ><li>FAQs</li></a
+            >
+          </ul>
+        </section>
+        <section class="footer-sec">
+          <h1 class="text-white opacity-50 poppins-thin">PRODUCT</h1>
+          <ul>
+            <a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+              ><li>Tutorials</li></a
+            >
+            <a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+              ><li>How Does It Work?</li></a
+            >
+            <a
+              href="#"
+              class="hover:opacity-50 hover:transition-opacity transition-opacity"
+              ><li>Member+ Perks</li></a
+            >
+          </ul>
+        </section>
+        <section class="footer-sec">
+          <h1 class="text-white opacity-50 poppins-thin">SERVICES</h1>
+          <h2 class="text-xl text-start">
+            Let us know your email for more info
+          </h2>
+          <form method="post" action="/" class="footer__form p-2">
+            <input
+              type="text"
+              id="footer_mail"
+              class="text-slate-900 p-2 poppins-medium border-none outline-none bg-slate-50 poppins-thin"
+              placeholder="Email"
+            />
+            <button type="submit" class="bg-slate-950 p-2">Subscribe</button>
+          </form>
+        </section>
+      </div>
+    </footer>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const main__form = document.getElementById("main__form");
-        const main__submitter = document.getElementById("main__submitter");
-        const svg = document.getElementById("cart");
-        const mailSVG = document.getElementById("mail__svg");
-        const phoneSVG = document.getElementById("phone__svg");
-
-        console.log(main__form);
-
-        const mailBox = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-            `;
-
-        const cart = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14" fill="none">
-      <path d="M0.507507 0.5H2.94968L3.81968 9.15C3.85584 9.38845 3.97696 9.6058 4.16073 9.762C4.34449 9.9182 4.57852 10.0027 4.81968 10H11.1197C11.3378 10.0114 11.5536 9.95107 11.7341 9.82829C11.9147 9.7055 12.0501 9.52698 12.1197 9.32L13.4497 5.32C13.4993 5.16962 13.5125 5.0096 13.4881 4.85314C13.4638 4.69667 13.4026 4.54822 13.3097 4.42C13.2129 4.28368 13.0834 4.17381 12.9332 4.10043C12.783 4.02706 12.6167 3.99253 12.4497 4H3.29968" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M10.9497 13.5C10.6736 13.5 10.4497 13.2761 10.4497 13C10.4497 12.7239 10.6736 12.5 10.9497 12.5C11.2258 12.5 11.4497 12.7239 11.4497 13C11.4497 13.2761 11.2258 13.5 10.9497 13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M4.44971 13.5C4.17356 13.5 3.94971 13.2761 3.94971 13C3.94971 12.7239 4.17356 12.5 4.44971 12.5C4.72585 12.5 4.94971 12.7239 4.94971 13C4.94971 13.2761 4.72585 13.5 4.44971 13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-            `;
-        svg.innerHTML += cart;
-        mailSVG.innerHTML += mailBox;
-
-        main__form.addEventListener("submit", (ev) => {
-          ev.preventDefault();
-          const formData = new FormData(main__form);
-          const data = JSON.stringify(Object.fromEntries(formData));
-
-          fetch("/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: data,
-          });
+      const body = document.querySelector("body");
+      const nav = document.querySelector("nav");
+      document.addEventListener("DOMContentLoaded", function (ev) {
+        console.log(`Content Loaded: ${ev.timeStamp} ms`);
+        window.addEventListener("scroll", () => {
+          const deltaY = body.offsetHeight - window.scrollY;
+          console.log(deltaY);
         });
       });
     </script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
   </body>
 </html>
